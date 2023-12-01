@@ -1,0 +1,28 @@
+<div style="display: flex; justify-content: space-between;">
+    <div style="width: 48%;">
+
+        <h2>Product Information</h2>
+        <div *ngIf="cartItems.length === 0">Your cart is empty!</div>
+        <p>Pay Powdur</p><div *ngIf="cartItems.length > 0" class="totalAmt">{{ totalPrice | currency }}</div>
+        <div *ngFor="let item of cartItems" class="cart-item">
+            <div class="item-details">
+                <img [src]="'assets/images/' + item.product.image" [alt]="item.product.name" class="product-image" />
+                <h4>{{ item.product.name }}</h4>
+                <p>Price: {{ item.product.price | currency }}</p>
+                <h4>Qty{{ item.quantity }}</h4>
+            </div>
+        </div>
+        <!-- <div  class="total-price">
+            <p>Total Price: {{ totalPrice | currency }}</p>
+        </div> -->
+    </div>
+    <div style="width: 48%;" class="payment">
+        <h2>Payment Form</h2>
+        <form>
+         
+            <!-- Payment Button -->
+            <button type="button" (click)="makePayment(this.cartPrice)">Pay with Stripe</button>
+        
+          </form>
+    </div>
+</div>

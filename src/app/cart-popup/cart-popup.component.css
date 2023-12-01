@@ -1,0 +1,38 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .cart-item {
+    display: flex;
+    padding: 10px;
+    border-bottom: 1px solid #ccc;
+  }
+  
+  .item-details {
+    flex-grow: 1;
+  }
+  
+  .item-actions {
+    justify-content: flex-end;
+  }
+  
+  .total-price {
+    margin-top: 10px;
+    text-align: right;
+    font-weight: bold;
+  }
+  .closeIcon{
+    float:right;
+  }
+  .cart {
+    margin-left:auto;
+  }
+  .checkoutBtn{
+    margin-bottom: 10px;
+    text-align: center;
+  }
+  .product-image {
+    width:100px;
+  }
